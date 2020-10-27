@@ -25,7 +25,7 @@ database and an error message should be reported to STDOUT. </br>
 hemlatamahaur@Hemlatas-MacBook-Pro task1 % php user_upload.php --file=users.csv</br>
 Connected to Database</br>
 </br>
-**To create a table in database:**</br>
+**To create a table and insert data in database:**</br>
 hemlatamahaur@Hemlatas-MacBook-Pro task1 % mysql -u root -p</br>
 Enter password: </br>
 Welcome to the MariaDB monitor.  Commands end with ; or \g.</br>
