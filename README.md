@@ -72,26 +72,25 @@ MySQL [userDetails]> CREATE TABLE users (</br>
     -> email VARCHAR(254) UNIQUE NOT NULL</br>
     -> Ctrl-C -- exit!</br>
  
- **Running the program**
-
-hemlatamahaur@Hemlatas-MacBook-Pro task1 % php user_upload.php --file=users.csv
-string(4) "name"
-string(7) "surname"
-string(6) "email	"
-PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'email	' for key 'users.email' in /Users/hemlatamahaur/Desktop/Task1/user_upload.php:30
-Stack trace:
-#0 /Users/hemlatamahaur/Desktop/Task1/user_upload.php(30): PDOStatement->execute()
-#1 {main}
-  thrown in /Users/hemlatamahaur/Desktop/Task1/user_upload.php on line 30
-
-Fatal error: Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'email	' for key 'users.email' in /Users/hemlatamahaur/Desktop/Task1/user_upload.php:30
-Stack trace:
-#0 /Users/hemlatamahaur/Desktop/Task1/user_upload.php(30): PDOStatement->execute()
-#1 {main}
-  thrown in /Users/hemlatamahaur/Desktop/Task1/user_upload.php on line 30
-  
-  
-  
+ **Running the program** </br>
+ </br>
+hemlatamahaur@Hemlatas-MacBook-Pro task1 % php user_upload.php --file=users.csv </br>
+string(4) "name" </br>
+string(7) "surname" </br>
+string(6) "email	" </br>
+PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'email	' for key 'users.email' in </br> /Users/hemlatamahaur/Desktop/Task1/user_upload.php:30 </br>
+Stack trace: </br>
+#0 /Users/hemlatamahaur/Desktop/Task1/user_upload.php(30): PDOStatement->execute() </br>
+#1 {main} </br>
+  thrown in /Users/hemlatamahaur/Desktop/Task1/user_upload.php on line 30 </br>
+ </br>
+Fatal error: Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'email	' for key 'users.email' in </br> /Users/hemlatamahaur/Desktop/Task1/user_upload.php:30 </br>
+Stack trace: </br>
+#0 /Users/hemlatamahaur/Desktop/Task1/user_upload.php(30): PDOStatement->execute() </br>
+#1 {main} </br>
+  thrown in /Users/hemlatamahaur/Desktop/Task1/user_upload.php on line 30 </br>
+   </br>
+    </br>
   It has duplicated emails hence no value is inserted into the database.
 
 
