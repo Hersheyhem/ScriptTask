@@ -71,5 +71,8 @@ MySQL [userDetails]> CREATE TABLE users (</br>
     -> surname VARCHAR(255) NOT NULL,</br>
     -> email VARCHAR(254) UNIQUE NOT NULL</br>
     -> Ctrl-C -- exit!</br>
+    MySQL [userDetails]> LOAD DATA INFILE 'users.csv' replace INTO TABLE users FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';</br>
+    #1062 - Duplicate entry '' for key 'email' 
+
 
 
