@@ -22,54 +22,54 @@ a legal format). In case that an email is invalid, no insert should be made to
 database and an error message should be reported to STDOUT. </br>
 
 **To connect to database and parse csv file:**
-hemlatamahaur@Hemlatas-MacBook-Pro task1 % php user_upload.php --file=users.csv
-Connected to Database
-
-**To create a table in database:**
-hemlatamahaur@Hemlatas-MacBook-Pro task1 % mysql -u root -p
-Enter password: 
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MySQL connection id is 13
-Server version: 8.0.21 Homebrew
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-MySQL [(none)]> SHOW DATABASES;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-4 rows in set (13.295 sec)
-
-MySQL [(none)]> CREATE DATABASE userDetails;
-Query OK, 1 row affected (0.650 sec)
-
-MySQL [(none)]> SHOW DATABASES;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-| userDetails        |
-+--------------------+
-5 rows in set (0.156 sec)
-
-MySQL [(none)]> USE userDetails;
-Database changed
-MySQL [userDetails]> CREATE TABLE users (
-    -> 
-    -> id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-    -> name VARCHAR(255) NOT NULL,
-    -> surname VARCHAR(255) NOT NULL,
-    -> email VARCHAR(254) UNIQUE NOT NULL
-    -> Ctrl-C -- exit!
+hemlatamahaur@Hemlatas-MacBook-Pro task1 % php user_upload.php --file=users.csv</br>
+Connected to Database</br>
+</br>
+**To create a table in database:**</br>
+hemlatamahaur@Hemlatas-MacBook-Pro task1 % mysql -u root -p</br>
+Enter password: </br>
+Welcome to the MariaDB monitor.  Commands end with ; or \g.</br>
+Your MySQL connection id is 13</br>
+Server version: 8.0.21 Homebrew</br>
+</br>
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.</br>
+</br>
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</br>
+</br>
+MySQL [(none)]> SHOW DATABASES;</br>
++--------------------+</br>
+| Database           |</br>
++--------------------+</br>
+| information_schema |</br>
+| mysql              |</br>
+| performance_schema |</br>
+| sys                |</br>
++--------------------+</br>
+4 rows in set (13.295 sec)</br>
+</br>
+MySQL [(none)]> CREATE DATABASE userDetails;</br>
+Query OK, 1 row affected (0.650 sec)</br>
+</br>
+MySQL [(none)]> SHOW DATABASES;</br>
++--------------------+</br>
+| Database           |</br>
++--------------------+</br>
+| information_schema |</br>
+| mysql              |</br>
+| performance_schema |</br>
+| sys                |</br>
+| userDetails        |</br>
++--------------------+</br>
+5 rows in set (0.156 sec)</br>
+</br>
+MySQL [(none)]> USE userDetails;</br>
+Database changed</br>
+MySQL [userDetails]> CREATE TABLE users (</br>
+    -> </br>
+    -> id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, </br>
+    -> name VARCHAR(255) NOT NULL,</br>
+    -> surname VARCHAR(255) NOT NULL,</br>
+    -> email VARCHAR(254) UNIQUE NOT NULL</br>
+    -> Ctrl-C -- exit!</br>
 
 
