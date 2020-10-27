@@ -13,7 +13,7 @@ foreach($csv as $row) {
     $users[] = [
         $col_names[0] => ucfirst(strtolower($row[0])),
         $col_names[1] => ucfirst(strtolower($row[1])),
-        $col_names[2] => strtolower(strtolower($row[2])),
+        $col_names[2] => strtolower($row[2]),
     ];
   
     $stmt = $dbh->prepare("INSERT INTO users(name, surname, email) 
