@@ -71,8 +71,28 @@ MySQL [userDetails]> CREATE TABLE users (</br>
     -> surname VARCHAR(255) NOT NULL,</br>
     -> email VARCHAR(254) UNIQUE NOT NULL</br>
     -> Ctrl-C -- exit!</br>
-    MySQL [userDetails]> LOAD DATA INFILE 'users.csv' replace INTO TABLE users FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';</br>
-    #1062 - Duplicate entry '' for key 'email' 
+ 
+ **Running the program**
+
+hemlatamahaur@Hemlatas-MacBook-Pro task1 % php user_upload.php --file=users.csv
+string(4) "name"
+string(7) "surname"
+string(6) "email	"
+PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'email	' for key 'users.email' in /Users/hemlatamahaur/Desktop/Task1/user_upload.php:30
+Stack trace:
+#0 /Users/hemlatamahaur/Desktop/Task1/user_upload.php(30): PDOStatement->execute()
+#1 {main}
+  thrown in /Users/hemlatamahaur/Desktop/Task1/user_upload.php on line 30
+
+Fatal error: Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'email	' for key 'users.email' in /Users/hemlatamahaur/Desktop/Task1/user_upload.php:30
+Stack trace:
+#0 /Users/hemlatamahaur/Desktop/Task1/user_upload.php(30): PDOStatement->execute()
+#1 {main}
+  thrown in /Users/hemlatamahaur/Desktop/Task1/user_upload.php on line 30
+  
+  
+  
+  It has duplicated emails hence no value is inserted into the database.
 
 
 
